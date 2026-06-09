@@ -35,7 +35,7 @@ From this folder:
 python .\scripts\build-handout-pdf.py .\examples\third-shot-drop-student-handout.md -o .\outputs\third-shot-drop-student-handout.pdf
 ```
 
-By default, sections 8 and 11 start on new pages. To change that for a specific handout:
+By default, no section is forced onto a new page. Each section is kept together and sections flow to fill each page, moving to the next page only when they will not fit as a whole. To force specific sections to start on a new page for a particular handout:
 
 ```powershell
 python .\scripts\build-handout-pdf.py .\examples\third-shot-drop-student-handout.md --page-start-sections 11

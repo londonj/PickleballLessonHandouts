@@ -30,8 +30,7 @@ Use this checklist before sharing a student handout PDF.
 - The PDF uses `templates/handout-style.css`.
 - The generated preview PNGs were visually inspected (not just the page count).
 - No numbered section is split across two pages. Each section sits wholly on one page.
-- Section 8 starts on a new page unless intentionally overridden.
-- Resources starts on a new page unless intentionally overridden.
+- Pages are reasonably filled; there is no large gap of white space left by a forced page break that more content could have filled.
 - The Resources section is visible and complete.
 - No text is clipped, overlapped, or unreadably small.
 - Link titles with special characters render correctly.

@@ -179,7 +179,7 @@ Example:
 python .\scripts\build-handout-pdf.py .\examples\serving-deep-student-handout.md -o .\outputs\serving-deep-student-handout.pdf
 ```
 
-By default, the script starts sections 8 and 11 on new pages. This helps prevent awkward page breaks.
+By default, no section is forced onto a new page. Each section is kept together and sections flow to fill each page, moving to the next page only when they will not fit as a whole.
 
 ### Step 5: Visually Check the PDF
 
@@ -191,7 +191,7 @@ Open each `page-#.png` image and check:
 
 - Section headings are not stranded at the bottom of a page.
 - No numbered section is split across pages. Each section sits wholly on one page.
-- Section 8 starts cleanly on a new page.
+- Pages are reasonably filled; no large white-space gap is left where more sections could have fit.
 - Resources is present and complete.
 - Text is not clipped, overlapped, or too small.
 - Link titles display correctly.
@@ -241,13 +241,13 @@ Build a new handout:
 python .\scripts\build-handout-pdf.py .\examples\[lesson-slug]-student-handout.md -o .\outputs\[lesson-slug]-student-handout.pdf
 ```
 
-Start only Resources on a new page, not section 8:
+Force Resources to start on a new page:
 
 ```powershell
 python .\scripts\build-handout-pdf.py .\examples\[lesson-slug]-student-handout.md -o .\outputs\[lesson-slug]-student-handout.pdf --page-start-sections 11
 ```
 
-Start sections 7, 8, and 11 on new pages:
+Force sections 7, 8, and 11 to start on new pages:
 
 ```powershell
 python .\scripts\build-handout-pdf.py .\examples\[lesson-slug]-student-handout.md -o .\outputs\[lesson-slug]-student-handout.pdf --page-start-sections 7,8,11

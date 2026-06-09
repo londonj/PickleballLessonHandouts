@@ -13,7 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_STYLE = ROOT / "templates" / "handout-style.css"
 DEFAULT_WORK = ROOT / "work"
 DEFAULT_OUTPUT = ROOT / "outputs"
-DEFAULT_PAGE_START_SECTIONS = {8, 11}
+# No sections are forced onto a new page by default. Each section is kept
+# together (break-inside: avoid in the stylesheet), so sections flow and fill
+# each page, moving to the next page only when they will not fit as a whole.
+# Use --page-start-sections to force specific sections to lead a page.
+DEFAULT_PAGE_START_SECTIONS: set[int] = set()
 
 
 def find_chrome() -> Path:
@@ -230,8 +234,8 @@ def main() -> int:
     parser.add_argument("--style", type=Path, default=DEFAULT_STYLE, help="CSS stylesheet path.")
     parser.add_argument(
         "--page-start-sections",
-        default="8,11",
-        help="Comma-separated numbered sections that should always start on a new page.",
+        default="",
+        help="Comma-separated numbered sections that should always start on a new page. Empty by default; sections are kept together and flow to fill each page.",
     )
     parser.add_argument("--no-preview", action="store_true", help="Skip rendered PNG page previews.")
     args = parser.parse_args()
