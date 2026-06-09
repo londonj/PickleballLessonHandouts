@@ -27,7 +27,7 @@
 ## 9. Visualization 👁️
 
 
-## 10. Before You Play Again 🔁
+## 10. Quick Reminders 🎗️
 
 
 ## 11. Resources 🔗

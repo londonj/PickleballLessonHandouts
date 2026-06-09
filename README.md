@@ -22,7 +22,7 @@ The goal is to keep content and visual design separate:
 
 1. Copy `templates/student-handout-template.md` or an existing file from `examples/`.
 2. Write the new lesson handout in Markdown.
-3. Keep drills in `7. Homework 🏠`, quick review cues in `10. Before You Play Again 🔁`, and outside links in `11. Resources 🔗`.
+3. Keep drills in `7. Homework 🏠`, quick review cues in `10. Quick Reminders 🎗️`, and outside links in `11. Resources 🔗`.
 4. Build the PDF with the shared stylesheet.
 5. Open the generated preview images in `work/` and visually check page breaks before sharing the PDF.
 6. Run through `docs/production-checklist.md`.

@@ -11,7 +11,7 @@ Use this checklist before sharing a student handout PDF.
 - Technical terms are explained simply.
 - The Big Idea is focused and memorable.
 - Homework contains practice drills and assignments.
-- Before You Play Again contains only quick reminders.
+- Quick Reminders contains only short pre-play cues.
 - Resources contains outside references only.
 - No drills or review lists are duplicated in Resources.
 

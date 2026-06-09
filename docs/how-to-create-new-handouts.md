@@ -133,7 +133,7 @@ Follow these rules:
 - Write for beginner to intermediate adult students.
 - Keep the tone clear, practical, encouraging, and coach-like.
 - Put all practice drills and assignments in 7. Homework 🏠.
-- Put quick pre-play reminders in 10. Before You Play Again 🔁.
+- Put quick pre-play reminders in 10. Quick Reminders 🎗️.
 - Put only outside references in 11. Resources 🔗.
 - Do not duplicate drills or review lists in Resources.
 - Use current web research for Resources.
@@ -208,7 +208,7 @@ Confirm:
 - All 11 sections are present.
 - The lesson topic is clear.
 - Homework includes the drills.
-- Before You Play Again includes only quick reminders.
+- Quick Reminders includes only short pre-play cues.
 - Resources includes only outside references.
 - Resources has exactly three articles and exactly three YouTube videos.
 - Article sources are not repeated.

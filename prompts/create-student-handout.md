@@ -12,8 +12,9 @@ Follow these rules:
 - Use the exact numbered section headings and emojis from the template.
 - Write for beginner to intermediate adult students.
 - Keep the tone clear, practical, encouraging, and coach-like.
+- Do not use temporal language (for example "today," "today's lesson," or "in our last lesson"). Use timeless phrasing like "This lesson covers..." so the handout reads correctly whenever the student reviews it.
 - Put all practice drills and assignments in 7. Homework 🏠.
-- Put quick pre-play reminders in 10. Before You Play Again 🔁.
+- Put quick pre-play reminders in 10. Quick Reminders 🎗️.
 - Put only outside references in 11. Resources 🔗.
 - Do not duplicate drills or review lists in Resources.
 - Use current web research for Resources.

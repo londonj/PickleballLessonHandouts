@@ -2,7 +2,7 @@
 
 ## 1. Lesson Recap 🧠
 
-Today’s lesson focused on the 3rd shot drop: the soft shot the serving team often hits after the serve and return. The goal is not to win the point immediately. The goal is to neutralize the returning team’s advantage at the kitchen line and give you and your partner time to move forward.
+This lesson covers the 3rd shot drop: the soft shot the serving team often hits after the serve and return. The goal is not to win the point immediately. The goal is to neutralize the returning team’s advantage at the kitchen line and give you and your partner time to move forward.
 
 A good 3rd shot drop lands softly in or near the opponent’s non-volley zone, also called the kitchen. When it drops low, your opponents have to hit up instead of attacking down.
 
@@ -61,7 +61,7 @@ Think: “soft, high enough, and unattackable.” Your job is to buy time, move 
 
 ## 7. Homework 🏠
 
-Practice these before your next lesson or play session:
+Practice these before your next play session:
 
 - Ball-toss drop drill: Stand at the baseline without your paddle. Toss 20 balls underhand into the kitchen, aiming cross-court. Focus on soft arc, forward weight shift, and follow-through.
 - Paddle drop reps: From the baseline, hit 30 gentle drops into the kitchen. Start with self-feeds, then use a partner feed if available.
@@ -84,7 +84,7 @@ Before you play, picture yourself serving deep and staying balanced behind the b
 
 Now imagine your paddle lifting smoothly through the ball. The ball rises softly, peaks on your side, clears the net, and lands in the kitchen. Your opponent reaches forward and has to hit up. You and your partner move forward together, split step, and feel ready for the next ball.
 
-## 10. Before You Play Again 🔁
+## 10. Quick Reminders 🎗️
 
 - Soft grip.
 - Low to high.

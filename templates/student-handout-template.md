@@ -13,6 +13,7 @@ Keep the language clear, practical, encouraging, and appropriate for beginner to
 - Keep the tone encouraging, practical, and coach-like.
 - Do not include the template instructions in the final student handout.
 - Avoid repeating the same content in multiple sections. Each section should have a distinct purpose.
+- Do not use temporal language that ties the handout to a specific day or session. Avoid phrases such as "today," "today's lesson," "this lesson covered," "yesterday," or "in our last lesson." Write the handout so it reads correctly whenever the student reviews it. For example, use "This lesson covers..." instead of "Today's lesson focused on...".
 
 Each section heading must use the exact same emoji shown in this template. The emoji is part of the section title and should remain unchanged when creating student handouts from this template.
 
@@ -32,7 +33,7 @@ When formatting the handout as a PDF:
 ## Section Organization Rules
 
 - Practice drills and assignments belong in `7. Homework 🏠`.
-- Quick reminders and pre-play review cues belong in `10. Before You Play Again 🔁`.
+- Quick reminders and pre-play review cues belong in `10. Quick Reminders 🎗️`.
 - Outside links and reference materials belong in `11. Resources 🔗`.
 - Do not place duplicate practice drills or repeated review lists in Resources.
 - Resources should support the lesson, not repeat the entire handout.
@@ -42,6 +43,8 @@ When formatting the handout as a PDF:
 Provide a brief overview of what the lesson covered. This section should remind the student of the main topic, the purpose of the skill or strategy, and why it matters during actual play.
 
 Keep this section short and readable. It should function as a memory jogger, not a full lesson transcript. Include the most important takeaways from the lesson in plain language.
+
+Do not anchor this section to a specific day or session. Use timeless phrasing such as "This lesson covers..." rather than "Today's lesson focused on...", since the student may read the handout at any time.
 
 ## 2. Big Idea 💡
 
@@ -117,7 +120,7 @@ The visualization should guide the student through imagining the skill or strate
 
 Keep the script simple and specific. Focus on calm execution, correct movement, smart decision-making, and confidence. Avoid making the visualization overly dramatic or unrealistic.
 
-## 10. Before You Play Again 🔁
+## 10. Quick Reminders 🎗️
 
 Provide a brief pre-play checklist for the student to review before a game, open play, practice session, or clinic. This section should be shorter than Homework.
 
@@ -131,7 +134,7 @@ Do not include full practice drills here. Keep this section to quick cues, prior
 
 This section must always appear at the very end of the handout.
 
-Resources should provide optional outside review away from the court. They should not repeat the Homework section or duplicate the Before You Play Again checklist.
+Resources should provide optional outside review away from the court. They should not repeat the Homework section or duplicate the Quick Reminders checklist.
 
 Use current web research when generating this section. Resource links, article availability, YouTube titles, channels, and view counts may change over time, so verify them at the time the handout is created.
 
