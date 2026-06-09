@@ -13,7 +13,7 @@ Keep the language clear, practical, encouraging, and appropriate for beginner to
 - Keep the tone encouraging, practical, and coach-like.
 - Do not include the template instructions in the final student handout.
 - Avoid repeating the same content in multiple sections. Each section should have a distinct purpose.
-- Do not use temporal language that ties the handout to a specific day or session. Avoid phrases such as "today," "today's lesson," "this lesson covered," "yesterday," or "in our last lesson." Write the handout so it reads correctly whenever the student reviews it. For example, use "This lesson covers..." instead of "Today's lesson focused on...".
+- Do not frame the handout around a lesson or a point in time. Write it as a straightforward reference about the skill itself, so it reads correctly no matter when the student reviews it. Avoid lesson- or time-anchored phrasing such as "today," "today's lesson," "in our last lesson," "this lesson covers," or "this lesson covered." Instead of "This lesson covers the dink volley...," open by describing the skill directly, for example "The dink volley is...".
 
 Each section heading must use the exact same emoji shown in this template. The emoji is part of the section title and should remain unchanged when creating student handouts from this template.
 
@@ -40,11 +40,11 @@ When formatting the handout as a PDF:
 
 ## 1. Lesson Recap 🧠
 
-Provide a brief overview of what the lesson covered. This section should remind the student of the main topic, the purpose of the skill or strategy, and why it matters during actual play.
+Provide a brief overview of the skill or strategy. This section should remind the student of the main topic, the purpose of the skill or strategy, and why it matters during actual play.
 
-Keep this section short and readable. It should function as a memory jogger, not a full lesson transcript. Include the most important takeaways from the lesson in plain language.
+Keep this section short and readable. It should function as a memory jogger, not a full transcript. Include the most important takeaways in plain language.
 
-Do not anchor this section to a specific day or session. Use timeless phrasing such as "This lesson covers..." rather than "Today's lesson focused on...", since the student may read the handout at any time.
+Do not frame this section around a lesson or a point in time. Open by describing the skill or strategy directly, for example "The dink volley is...", rather than "This lesson covers the dink volley..." or "Today's lesson focused on...", since the student may read the handout at any time.
 
 ## 2. Big Idea 💡
 

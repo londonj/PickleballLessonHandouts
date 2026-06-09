@@ -2,7 +2,7 @@
 
 ## 1. Lesson Recap 🧠
 
-This lesson covers the around-the-post shot, usually called the ATP. This is the shot where a wide ball lets you swing it back into the court around the *outside* of the net post instead of over the net.
+The around-the-post shot, usually called the ATP, is the shot where a wide ball lets you swing it back into the court around the *outside* of the net post instead of over the net.
 
 The ATP is completely legal. When the ball pulls you wide enough, you do not have to clear the net at all, and there is no height limit on the shot. You can hit it low, flat, and hard, and your opponents often cannot reach it.
 

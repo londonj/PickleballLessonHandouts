@@ -2,7 +2,7 @@
 
 ## 1. Lesson Recap 🧠
 
-This lesson covers the 3rd shot drop: the soft shot the serving team often hits after the serve and return. The goal is not to win the point immediately. The goal is to neutralize the returning team’s advantage at the kitchen line and give you and your partner time to move forward.
+The 3rd shot drop is the soft shot the serving team often hits after the serve and return. The goal is not to win the point immediately. The goal is to neutralize the returning team’s advantage at the kitchen line and give you and your partner time to move forward.
 
 A good 3rd shot drop lands softly in or near the opponent’s non-volley zone, also called the kitchen. When it drops low, your opponents have to hit up instead of attacking down.
 
