@@ -169,8 +169,9 @@ def format_bullet_parts(parts: list[str]) -> str:
     return formatted
 
 
-def build_html(markdown: str, style: str, page_start_sections: set[int]) -> tuple[str, str]:
+def build_html(markdown: str, style: str, page_start_sections: set[int], brief: bool = False) -> tuple[str, str]:
     body, title = markdown_to_html(markdown, page_start_sections)
+    sheet_class = "sheet brief" if brief else "sheet"
     document = f"""<!doctype html>
 <html lang="en">
 <head>
@@ -181,7 +182,7 @@ def build_html(markdown: str, style: str, page_start_sections: set[int]) -> tupl
   </style>
 </head>
 <body>
-  <main class="sheet">
+  <main class="{sheet_class}">
 {body}
   </main>
 </body>
@@ -207,7 +208,7 @@ def render_previews(pdf: Path, preview_dir: Path) -> int | None:
     return len(doc)
 
 
-def extract_text_check(pdf: Path) -> int | None:
+def extract_text_check(pdf: Path, require_resources: bool = True) -> int | None:
     try:
         from pypdf import PdfReader  # type: ignore
     except Exception:
@@ -215,7 +216,12 @@ def extract_text_check(pdf: Path) -> int | None:
 
     reader = PdfReader(str(pdf))
     text = "\n".join(page.extract_text() or "" for page in reader.pages)
-    for required in ("Lesson Recap", "Resources"):
+    # Brief one-page handouts omit Resources by design, so it is only required
+    # for the full handout.
+    required_sections = ["Lesson Recap"]
+    if require_resources:
+        required_sections.append("Resources")
+    for required in required_sections:
         if required not in text:
             raise RuntimeError(f"PDF text check failed. Missing: {required}")
     return len(reader.pages)
@@ -251,9 +257,10 @@ def main() -> int:
     DEFAULT_WORK.mkdir(parents=True, exist_ok=True)
     output.parent.mkdir(parents=True, exist_ok=True)
 
+    is_brief = "brief" in source.stem.lower()
     markdown = source.read_text(encoding="utf-8")
     style = style_path.read_text(encoding="utf-8")
-    html_doc, title = build_html(markdown, style, page_start_sections)
+    html_doc, title = build_html(markdown, style, page_start_sections, brief=is_brief)
     html_out.write_text(html_doc, encoding="utf-8")
 
     chrome = find_chrome()
@@ -269,7 +276,7 @@ def main() -> int:
         check=True,
     )
 
-    page_count = extract_text_check(output)
+    page_count = extract_text_check(output, require_resources=not is_brief)
     preview_count = None if args.no_preview else render_previews(output, preview_dir)
 
     print(f"Title: {title}")

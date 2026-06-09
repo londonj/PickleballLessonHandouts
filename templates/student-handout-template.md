@@ -37,6 +37,29 @@ When formatting the handout as a PDF:
 - Do not place duplicate practice drills or repeated review lists in Resources.
 - Resources should support the lesson, not repeat the entire handout.
 
+## Brief Version
+
+In addition to the full handout, each topic can have a condensed one-page brief version — a quick-reference companion the student can scan at a glance.
+
+The brief version follows these rules:
+
+- Everything must fit on a single page. If it overflows, tighten the wording until it fits.
+- Include only these sections, in this order, keeping the same titles and emojis but renumbering them consecutively 1–9:
+  1. Lesson Recap 🧠
+  2. Big Idea 💡
+  3. Key Cues 🎯
+  4. Step-by-Step 👣
+  5. Common Mistakes ⚠️
+  6. Self-Check ✅
+  7. Homework 🏠
+  8. Game Application 🎮
+  9. Quick Reminders 🎗️
+- Omit the Visualization and Resources sections entirely.
+- No section may contain more than three items. For list sections (Key Cues, Step-by-Step, Common Mistakes, Self-Check, Homework, Quick Reminders), keep only the three most important, using best judgment. For prose sections (Lesson Recap, Big Idea, Game Application), keep them to a few short sentences.
+- Keep the same clear, practical, encouraging, coach-like tone, and the same rule against lesson- or time-anchored framing.
+- Name brief files using the pattern `Lesson-Handout-{Technique}-Brief` in Title-Case with hyphens (for example `Lesson-Handout-Overhead-Smash-Brief`). Use the same name for the Markdown and the PDF.
+- Build with the same script, then visually confirm the PDF renders on exactly one page with no section split.
+
 ## 1. Lesson Recap 🧠
 
 Provide a brief overview of the skill or strategy. This section should remind the student of the main topic, the purpose of the skill or strategy, and why it matters during actual play.

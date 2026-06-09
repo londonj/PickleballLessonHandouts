@@ -175,6 +175,22 @@ Example:
 - Markdown file: `examples/Lesson-Handout-Deep-Serve-And-Return.md`
 - PDF file: `outputs/Lesson-Handout-Deep-Serve-And-Return.pdf`
 
+### Optional: Brief One-Page Version
+
+Each topic can also have a condensed **brief** version — a single-page quick reference the student can scan at a glance. The full rules live in `templates/student-handout-template.md` under "Brief Version." In short:
+
+- Everything fits on one page.
+- Keep only nine sections, renumbered 1–9: Lesson Recap, Big Idea, Key Cues, Step-by-Step, Common Mistakes, Self-Check, Homework, Game Application, Quick Reminders.
+- Omit the Visualization and Resources sections.
+- No section has more than three items; keep the three most important.
+- Name the files `Lesson-Handout-{Technique}-Brief` (same name for the Markdown and PDF).
+
+Build it with the same script (the build automatically skips the Resources text check for brief files), then visually confirm it renders on exactly one page:
+
+```powershell
+python .\scripts\build-handout-pdf.py .\examples\Lesson-Handout-[Technique]-Brief.md -o .\outputs\Lesson-Handout-[Technique]-Brief.pdf
+```
+
 ### Step 4: Build the PDF
 
 From the project folder, run:

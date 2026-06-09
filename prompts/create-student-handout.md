@@ -35,3 +35,25 @@ C:\Coding\Pickleball_Lesson_Handouts\work\lesson-handout-[technique]-preview
 Confirm that major sections do not break awkwardly across pages and that Resources is present and coherent.
 ```
 
+## Brief One-Page Version
+
+To also create a condensed brief version, add these instructions:
+
+```text
+Create a brief one-page version of this handout.
+
+Follow these rules:
+- Everything must fit on a single page.
+- Include only these sections, in order, keeping the same titles and emojis but renumbered consecutively 1–9: 1. Lesson Recap 🧠, 2. Big Idea 💡, 3. Key Cues 🎯, 4. Step-by-Step 👣, 5. Common Mistakes ⚠️, 6. Self-Check ✅, 7. Homework 🏠, 8. Game Application 🎮, 9. Quick Reminders 🎗️.
+- Omit the Visualization and Resources sections entirely.
+- No section may contain more than three items. Keep the three most important per section, using best judgment. Keep prose sections to a few short sentences.
+- Keep the same tone and the same rule against lesson- or time-anchored framing.
+- Name the files Lesson-Handout-[Technique]-Brief in Title-Case with dashes. Save the Markdown in:
+  C:\Coding\Pickleball_Lesson_Handouts\examples\Lesson-Handout-[Technique]-Brief.md
+
+Build the PDF with:
+python C:\Coding\Pickleball_Lesson_Handouts\scripts\build-handout-pdf.py C:\Coding\Pickleball_Lesson_Handouts\examples\Lesson-Handout-[Technique]-Brief.md -o C:\Coding\Pickleball_Lesson_Handouts\outputs\Lesson-Handout-[Technique]-Brief.pdf
+
+Then visually inspect the preview PNGs and confirm the handout renders on exactly one page with no section split.
+```
+
