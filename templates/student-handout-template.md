@@ -39,7 +39,7 @@ When formatting the handout as a PDF:
 
 ## Brief Version
 
-In addition to the full handout, each topic can have a condensed one-page brief version — a quick-reference companion the student can scan at a glance.
+Every topic always has two versions: the full handout and a condensed one-page brief version — a quick-reference companion the student can scan at a glance. The brief version is required, not optional; produce both every time.
 
 The brief version follows these rules:
 

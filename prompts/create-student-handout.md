@@ -2,11 +2,17 @@
 
 Use this prompt when asking an AI assistant to create a new handout for this project.
 
+**Every topic always gets two versions: the full handout and the brief one-page version. Both are required deliverables every time — never produce only one.**
+
 ```text
 Create a student-facing pickleball lesson handout for: [LESSON TOPIC].
 
+Produce BOTH required versions for this topic: the full handout and the brief one-page version. Both are mandatory every time.
+
 Use the template at:
 C:\Coding\Pickleball_Lesson_Handouts\templates\student-handout-template.md
+
+== PART 1: FULL HANDOUT ==
 
 Follow these rules:
 - Use the exact numbered section headings and emojis from the template.
@@ -26,21 +32,16 @@ Follow these rules:
 - Name the files using the pattern Lesson-Handout-[Technique] in Title-Case with dashes (for example Lesson-Handout-Overhead-Smash). Save the finished Markdown handout in:
   C:\Coding\Pickleball_Lesson_Handouts\examples\Lesson-Handout-[Technique].md
 
-After writing the Markdown, build the PDF using:
+Build the full PDF using:
 python C:\Coding\Pickleball_Lesson_Handouts\scripts\build-handout-pdf.py C:\Coding\Pickleball_Lesson_Handouts\examples\Lesson-Handout-[Technique].md -o C:\Coding\Pickleball_Lesson_Handouts\outputs\Lesson-Handout-[Technique].pdf
 
-Before delivering the PDF, visually inspect the generated preview PNGs in:
+Visually inspect the preview PNGs in:
 C:\Coding\Pickleball_Lesson_Handouts\work\lesson-handout-[technique]-preview
+Confirm no section breaks across pages and that Resources is present and coherent.
 
-Confirm that major sections do not break awkwardly across pages and that Resources is present and coherent.
-```
+== PART 2: BRIEF ONE-PAGE VERSION (also required) ==
 
-## Brief One-Page Version
-
-To also create a condensed brief version, add these instructions:
-
-```text
-Create a brief one-page version of this handout.
+Create the condensed one-page companion to the full handout above.
 
 Follow these rules:
 - Everything must fit on a single page.
@@ -51,9 +52,13 @@ Follow these rules:
 - Name the files Lesson-Handout-[Technique]-Brief in Title-Case with dashes. Save the Markdown in:
   C:\Coding\Pickleball_Lesson_Handouts\examples\Lesson-Handout-[Technique]-Brief.md
 
-Build the PDF with:
+Build the brief PDF with:
 python C:\Coding\Pickleball_Lesson_Handouts\scripts\build-handout-pdf.py C:\Coding\Pickleball_Lesson_Handouts\examples\Lesson-Handout-[Technique]-Brief.md -o C:\Coding\Pickleball_Lesson_Handouts\outputs\Lesson-Handout-[Technique]-Brief.pdf
 
-Then visually inspect the preview PNGs and confirm the handout renders on exactly one page with no section split.
+Visually inspect the preview PNGs and confirm the handout renders on exactly one page with no section split.
+
+== DELIVER ==
+
+Confirm both versions are complete: two Markdown files in examples\ and two PDFs in outputs\ (full and brief), each visually verified.
 ```
 

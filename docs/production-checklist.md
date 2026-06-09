@@ -2,6 +2,8 @@
 
 Use this checklist before sharing a student handout PDF.
 
+Every topic ships as two versions — the full handout and the brief one-page version. Both are required. Run the Content, Resources, and PDF Layout checks below against the full handout, then complete the Brief Version checklist for its companion.
+
 ## Content
 
 - The lesson topic appears as the title.
@@ -35,10 +37,19 @@ Use this checklist before sharing a student handout PDF.
 - No text is clipped, overlapped, or unreadably small.
 - Link titles with special characters render correctly.
 
+## Brief Version
+
+- A brief companion exists for this topic (this is required, not optional).
+- Markdown is saved as `examples/Lesson-Handout-{Technique}-Brief.md` and the PDF as `outputs/Lesson-Handout-{Technique}-Brief.pdf`.
+- It includes only nine sections, renumbered 1–9: Lesson Recap, Big Idea, Key Cues, Step-by-Step, Common Mistakes, Self-Check, Homework, Game Application, Quick Reminders.
+- The Visualization and Resources sections are omitted.
+- No section has more than three items; prose sections are a few short sentences.
+- The preview PNGs were visually inspected and it renders on exactly one page with no section split.
+
 ## Files
 
-- Markdown source is saved in `examples/` or another intentional source folder.
-- PDF output is saved in `outputs/`.
+- Markdown sources (full and brief) are saved in `examples/` or another intentional source folder.
+- Both PDF outputs (full and brief) are saved in `outputs/`.
 - Generated HTML and PNG previews are in `work/`.
 - Any visual style changes were made in `templates/handout-style.css`, not manually in one PDF.
 

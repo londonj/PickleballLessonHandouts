@@ -76,7 +76,7 @@ Use this checklist before sharing a PDF with students.
 
 ### `examples/`
 
-Completed Markdown handouts are stored here. Earlier handouts use the older `{Technique}-Student-Handout` name; new handouts use the `Lesson-Handout-{Technique}` pattern, and a topic may also have a one-page `Lesson-Handout-{Technique}-Brief` companion. Current examples:
+Completed Markdown handouts are stored here. Earlier handouts use the older `{Technique}-Student-Handout` name; new handouts use the `Lesson-Handout-{Technique}` pattern, and every new topic also has a required one-page `Lesson-Handout-{Technique}-Brief` companion. Current examples:
 
 - `examples/Around-The-Post-Student-Handout.md`
 - `examples/Dink-Volleys-Student-Handout.md`
@@ -129,10 +129,14 @@ Use the prompt in:
 
 `prompts/create-student-handout.md`
 
+**Every topic always gets two versions: the full handout and the brief one-page version. Both are required every time — never produce only one.** The prompt file covers both in one pass. The instruction below shows the full-handout rules; the brief-version rules follow in the next subsection and are part of the same required job.
+
 The simplest way is to give an AI assistant this instruction:
 
 ```text
 Create a student-facing pickleball lesson handout for: [LESSON TOPIC].
+
+Always produce BOTH required versions: the full handout and the brief one-page version (rules for the brief follow below). Never produce only one.
 
 Use the template at:
 C:\Coding\Pickleball_Lesson_Handouts\templates\student-handout-template.md
@@ -176,9 +180,9 @@ Example:
 - Markdown file: `examples/Lesson-Handout-Deep-Serve-And-Return.md`
 - PDF file: `outputs/Lesson-Handout-Deep-Serve-And-Return.pdf`
 
-### Optional: Brief One-Page Version
+### Required: Brief One-Page Version
 
-Each topic can also have a condensed **brief** version — a single-page quick reference the student can scan at a glance. The full rules live in `templates/student-handout-template.md` under "Brief Version." In short:
+Every topic must also have a condensed **brief** version — a single-page quick reference the student can scan at a glance. This is not optional: each handout always ships as two versions, the full handout and the brief. The full rules live in `templates/student-handout-template.md` under "Brief Version." In short:
 
 - Everything fits on one page.
 - Keep only nine sections, renumbered 1–9: Lesson Recap, Big Idea, Key Cues, Step-by-Step, Common Mistakes, Self-Check, Homework, Game Application, Quick Reminders.
@@ -232,7 +236,7 @@ Use:
 
 `docs/production-checklist.md`
 
-Confirm:
+Confirm the full handout:
 
 - All 11 sections are present.
 - The lesson topic is clear.
@@ -243,6 +247,12 @@ Confirm:
 - Article sources are not repeated.
 - YouTube creators/channels are not repeated.
 - Rule or strategy references are useful and relevant.
+
+Confirm the brief version also exists:
+
+- Both files are present: `Lesson-Handout-[Technique].md` and `Lesson-Handout-[Technique]-Brief.md`, with both PDFs in `outputs/`.
+- The brief has nine sections (renumbered 1–9), no Visualization or Resources, and no more than three items per section.
+- The brief renders on exactly one page with no section split.
 
 ### Step 7: Share the PDF
 
@@ -256,16 +266,18 @@ Example:
 
 ## Common Commands
 
-Build a new handout:
+Build a new handout (run both — the full and the brief are both required):
 
 ```powershell
 python .\scripts\build-handout-pdf.py .\examples\Lesson-Handout-[Technique].md -o .\outputs\Lesson-Handout-[Technique].pdf
+python .\scripts\build-handout-pdf.py .\examples\Lesson-Handout-[Technique]-Brief.md -o .\outputs\Lesson-Handout-[Technique]-Brief.pdf
 ```
 
-Example, building the overhead smash handout:
+Example, building both overhead smash versions:
 
 ```powershell
 python .\scripts\build-handout-pdf.py .\examples\Lesson-Handout-Overhead-Smash.md -o .\outputs\Lesson-Handout-Overhead-Smash.pdf
+python .\scripts\build-handout-pdf.py .\examples\Lesson-Handout-Overhead-Smash-Brief.md -o .\outputs\Lesson-Handout-Overhead-Smash-Brief.pdf
 ```
 
 Force Resources to start on a new page:
@@ -333,10 +345,12 @@ git commit -m "Add deep serve handout"
 
 ## Quick Summary
 
+Every topic ships as two versions: the full handout and the brief one-page version. Both are required.
+
 1. Copy `templates/new-handout-starter.md`.
 2. Save it in `examples/` with a lesson-specific filename.
-3. Use `prompts/create-student-handout.md` to generate the content.
-4. Build the PDF with `scripts/build-handout-pdf.py`.
-5. Check the preview PNGs in `work/`.
+3. Use `prompts/create-student-handout.md` to generate the content for both the full and brief versions.
+4. Build both PDFs with `scripts/build-handout-pdf.py` (`Lesson-Handout-{Technique}.pdf` and `Lesson-Handout-{Technique}-Brief.pdf`).
+5. Check the preview PNGs in `work/` for both versions.
 6. Review with `docs/production-checklist.md`.
-7. Share the PDF from `outputs/`.
+7. Share both PDFs from `outputs/`.
