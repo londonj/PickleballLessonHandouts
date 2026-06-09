@@ -60,6 +60,12 @@ This script converts a Markdown handout into a styled PDF.
 
 It also creates preview images in the `work` folder so the PDF can be checked visually.
 
+### `scripts/compact-handout-pdf.py`
+
+This is an optional utility that builds a much smaller version of a handout PDF (roughly one-fifth the size). It does this by replacing the color emoji in the headings with small embedded images, which avoids the large emoji data Chrome would otherwise add. The result looks the same on the page.
+
+Use `scripts/build-handout-pdf.py` for the normal handout you share with students. Reach for this only when you specifically need a smaller file (for example, to email or attach it somewhere with a size limit).
+
 ### `prompts/create-student-handout.md`
 
 This contains the prompt to use with an AI assistant when generating a new handout.
@@ -70,11 +76,12 @@ Use this checklist before sharing a PDF with students.
 
 ### `examples/`
 
-Completed Markdown handouts can be stored here.
+Completed Markdown handouts are stored here. Current examples:
 
-There is already an example:
-
-`examples/third-shot-drop-student-handout.md`
+- `examples/Around-The-Post-Student-Handout.md`
+- `examples/Dink-Volleys-Student-Handout.md`
+- `examples/Lob-Defense-Student-Handout.md`
+- `examples/Third-Shot-Drop-Student-Handout.md`
 
 ### `outputs/`
 
@@ -110,9 +117,9 @@ Save the copy in the `examples` folder with a clear filename.
 
 Example:
 
-`examples/serving-deep-student-handout.md`
+`examples/Serving-Deep-Student-Handout.md`
 
-Use lowercase words separated by hyphens when naming files.
+Name files in Title-Case: capitalize the first letter of each word and separate words with hyphens. End the name with `-Student-Handout`.
 
 ### Step 3: Generate the Handout Content
 
@@ -132,6 +139,7 @@ Follow these rules:
 - Use the exact numbered section headings and emojis from the template.
 - Write for beginner to intermediate adult students.
 - Keep the tone clear, practical, encouraging, and coach-like.
+- Do not frame the handout around a lesson or a point in time. Open by describing the skill directly (for example "The dink volley is...") rather than "This lesson covers..." or "today's lesson," so the handout reads correctly whenever the student reviews it.
 - Put all practice drills and assignments in 7. Homework 🏠.
 - Put quick pre-play reminders in 10. Quick Reminders 🎗️.
 - Put only outside references in 11. Resources 🔗.
@@ -156,14 +164,14 @@ Confirm that major sections do not break awkwardly across pages and that Resourc
 
 Replace `[LESSON TOPIC]` with the actual lesson topic.
 
-Replace `[lesson-slug]` with a short lowercase filename version of the topic.
+Replace `[lesson-slug]` with the topic as a Title-Case filename: capitalize the first letter of each word and separate words with hyphens.
 
 Example:
 
 - Lesson topic: `Deep Serve and Return`
-- Lesson slug: `deep-serve-and-return`
-- Markdown file: `examples/deep-serve-and-return-student-handout.md`
-- PDF file: `outputs/deep-serve-and-return-student-handout.pdf`
+- Filename base: `Deep-Serve-And-Return`
+- Markdown file: `examples/Deep-Serve-And-Return-Student-Handout.md`
+- PDF file: `outputs/Deep-Serve-And-Return-Student-Handout.pdf`
 
 ### Step 4: Build the PDF
 
@@ -176,7 +184,7 @@ python .\scripts\build-handout-pdf.py .\examples\[lesson-slug]-student-handout.m
 Example:
 
 ```powershell
-python .\scripts\build-handout-pdf.py .\examples\serving-deep-student-handout.md -o .\outputs\serving-deep-student-handout.pdf
+python .\scripts\build-handout-pdf.py .\examples\Serving-Deep-Student-Handout.md -o .\outputs\Serving-Deep-Student-Handout.pdf
 ```
 
 By default, no section is forced onto a new page. Each section is kept together and sections flow to fill each page, moving to the next page only when they will not fit as a whole.
@@ -232,7 +240,7 @@ Example:
 Build the existing third-shot drop example:
 
 ```powershell
-python .\scripts\build-handout-pdf.py .\examples\third-shot-drop-student-handout.md -o .\outputs\third-shot-drop-student-handout.pdf
+python .\scripts\build-handout-pdf.py .\examples\Third-Shot-Drop-Student-Handout.md -o .\outputs\Third-Shot-Drop-Student-Handout.pdf
 ```
 
 Build a new handout:
@@ -275,6 +283,7 @@ python -m pip install pypdf pymupdf
 
 ## Caveats and Special Notes
 
+- Name handout files in Title-Case with hyphens (for example `Lob-Defense-Student-Handout.pdf`). Use the same name for the Markdown and the PDF.
 - Resources must be researched each time because links, article availability, YouTube titles, and view counts can change.
 - The AI assistant should browse the web when creating the Resources section.
 - The Resources section should not include practice drills or repeated review lists.
@@ -288,7 +297,7 @@ python -m pip install pypdf pymupdf
 
 ## Publishing Changes to GitHub
 
-After adding or updating handouts, commit and push the changes:
+After adding or updating handouts, commit and push the changes. Always push after committing so the GitHub copy stays in sync:
 
 ```powershell
 git status
