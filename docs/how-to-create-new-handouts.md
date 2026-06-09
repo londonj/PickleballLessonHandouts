@@ -76,13 +76,14 @@ Use this checklist before sharing a PDF with students.
 
 ### `examples/`
 
-Completed Markdown handouts are stored here. Earlier handouts use the older `{Technique}-Student-Handout` name; new handouts use the `Lesson-Handout-{Technique}` pattern. Current examples:
+Completed Markdown handouts are stored here. Earlier handouts use the older `{Technique}-Student-Handout` name; new handouts use the `Lesson-Handout-{Technique}` pattern, and a topic may also have a one-page `Lesson-Handout-{Technique}-Brief` companion. Current examples:
 
 - `examples/Around-The-Post-Student-Handout.md`
 - `examples/Dink-Volleys-Student-Handout.md`
-- `examples/Lob-Defense-Student-Handout.md`
 - `examples/Overhead-Smash-Student-Handout.md`
-- `examples/Third-Shot-Drop-Student-Handout.md`
+- `examples/Lesson-Handout-Third-Shot-Drop.md`
+- `examples/Lesson-Handout-Lob-Defense.md`
+- `examples/Lesson-Handout-Lob-Defense-Brief.md` (brief one-page version)
 
 ### `outputs/`
 
