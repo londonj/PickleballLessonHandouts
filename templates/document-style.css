@@ -1,0 +1,131 @@
+@page {
+  size: Letter;
+  margin: 0.62in 0.7in 0.68in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #1f2933;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.46;
+  background: white;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0 0 0.24in;
+  padding: 0.22in 0.26in 0.2in;
+  color: white;
+  font-size: 25pt;
+  line-height: 1.08;
+  letter-spacing: 0;
+  background: linear-gradient(90deg, #0f766e, #2563eb);
+  border-radius: 8px;
+}
+
+h2 {
+  margin: 0.23in 0 0.08in;
+  padding-bottom: 0.035in;
+  color: #0f3f46;
+  font-size: 15pt;
+  line-height: 1.18;
+  border-bottom: 2px solid #b7ddd6;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+h3 {
+  margin: 0.15in 0 0.04in;
+  color: #111827;
+  font-size: 11.8pt;
+  line-height: 1.2;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+p {
+  margin: 0 0 0.08in;
+}
+
+ul,
+ol {
+  margin: 0.03in 0 0.1in 0.24in;
+  padding: 0;
+}
+
+li {
+  margin: 0 0 0.04in;
+  padding-left: 0.025in;
+}
+
+code {
+  color: #0f172a;
+  font-family: "Cascadia Mono", Consolas, "Courier New", monospace;
+  font-size: 9pt;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 0.01in 0.035in;
+}
+
+pre {
+  margin: 0.06in 0 0.12in;
+  padding: 0.11in 0.13in;
+  color: #172033;
+  font-family: "Cascadia Mono", Consolas, "Courier New", monospace;
+  font-size: 8.35pt;
+  line-height: 1.32;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+  page-break-inside: avoid;
+}
+
+pre code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: inherit;
+}
+
+hr {
+  margin: 0.18in 0;
+  border: 0;
+  border-top: 1px solid #cbd5e1;
+}
+
+.doc {
+  max-width: 7.2in;
+  margin: 0 auto;
+}
+
+.callout {
+  margin: 0.1in 0 0.14in;
+  padding: 0.1in 0.13in;
+  background: #eef2ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+}
+
+@media print {
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  li {
+    break-inside: avoid;
+  }
+}
