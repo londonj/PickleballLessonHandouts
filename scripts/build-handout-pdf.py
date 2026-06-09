@@ -60,6 +60,7 @@ def markdown_to_html(markdown: str, page_start_sections: set[int]) -> tuple[str,
     blocks: list[str] = []
     lines = markdown.splitlines()
     title = "Student Handout"
+    section_open = False
     i = 0
 
     while i < len(lines):
@@ -76,15 +77,22 @@ def markdown_to_html(markdown: str, page_start_sections: set[int]) -> tuple[str,
             continue
 
         if line.startswith("## "):
+            if section_open:
+                blocks.append("</section>")
             number = section_number(line)
-            classes: list[str] = []
+            # Each numbered section is wrapped so it is kept together on one
+            # page (break-inside: avoid). Sections that should always lead a
+            # page get the page-start class instead.
+            section_classes = ["handout-section"]
+            h2_classes: list[str] = []
             if number in page_start_sections:
-                blocks.append('<div class="hard-page-break"></div>')
-                classes.append("page-start")
+                section_classes.append("page-start")
             if number == 11 or "Resources" in line:
-                classes.append("section-resources")
+                h2_classes.append("section-resources")
+            blocks.append(f'<section class="{" ".join(section_classes)}">')
+            section_open = True
             heading = inline_markdown(line[3:].strip())
-            class_attr = f' class="{" ".join(classes)}"' if classes else ""
+            class_attr = f' class="{" ".join(h2_classes)}"' if h2_classes else ""
             blocks.append(f"<h2{class_attr}>{heading}</h2>")
             i += 1
             continue
@@ -138,6 +146,9 @@ def markdown_to_html(markdown: str, page_start_sections: set[int]) -> tuple[str,
             paragraph.append(lines[i].strip())
             i += 1
         blocks.append(f"<p>{inline_markdown(' '.join(paragraph))}</p>")
+
+    if section_open:
+        blocks.append("</section>")
 
     return "\n".join(blocks), title
 

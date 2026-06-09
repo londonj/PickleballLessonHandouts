@@ -23,12 +23,11 @@ Do not replace, remove, or substitute the emojis unless the user specifically as
 
 When formatting the handout as a PDF:
 
-- Avoid splitting major numbered sections awkwardly across pages.
-- If a section would begin near the bottom of a page or split after only one or two lines, start that section on a new page.
-- Keep each section visually coherent, even if the final PDF becomes slightly longer.
+- A numbered section must never split across pages. The whole section (heading plus its content) stays on one page.
+- The build script enforces this automatically by keeping each section together, so a section that does not fit in the remaining space moves to the next page as a whole. This can leave white space at the bottom of a page, which is acceptable.
+- If a single section is too tall to fit on one page on its own, it will be forced to break. When that happens, shorten the section (fewer or tighter bullets) so it fits on one page.
 - If needed, compact spacing or font size slightly in the Resources section, but keep it readable.
-- Visually check the final rendered PDF before delivering it.
-- Do not rely only on text extraction or page count; inspect the rendered pages.
+- Always visually check the final rendered PDF (the preview PNGs) before delivering it. Do not rely only on text extraction or page count; inspect the rendered pages and confirm no section is split.
 
 ## Section Organization Rules
 

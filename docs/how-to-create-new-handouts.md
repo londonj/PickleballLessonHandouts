@@ -140,6 +140,8 @@ Follow these rules:
 - Include exactly three article links from three different sources.
 - Include exactly three YouTube links from three different creators/channels.
 - Include useful rule or strategy references only when they support the lesson.
+- A numbered section must never split across pages. The build keeps each section together automatically; if a section is too tall to fit on one page, shorten it so it fits.
+- Always visually inspect the rendered preview PNGs after building, and confirm no section is split across pages. Never rely on page count alone.
 - Save the finished Markdown handout in:
   C:\Coding\Pickleball_Lesson_Handouts\examples\[lesson-slug]-student-handout.md
 
@@ -188,7 +190,7 @@ After the script runs, check the generated preview images in:
 Open each `page-#.png` image and check:
 
 - Section headings are not stranded at the bottom of a page.
-- Major sections do not split awkwardly.
+- No numbered section is split across pages. Each section sits wholly on one page.
 - Section 8 starts cleanly on a new page.
 - Resources is present and complete.
 - Text is not clipped, overlapped, or too small.

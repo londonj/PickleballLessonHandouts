@@ -86,12 +86,22 @@ strong {
   margin: 0 auto;
 }
 
-.hard-page-break {
+/* Keep every numbered section together so it never splits across pages.
+   If a section will not fit in the remaining space, it moves to the next
+   page as a whole. */
+.handout-section {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Sections that should always lead a page (e.g. Game Application, Resources). */
+.handout-section.page-start {
   break-before: page;
   page-break-before: always;
-  height: 0;
-  margin: 0;
-  padding: 0;
+}
+
+.handout-section.page-start > h2 {
+  margin-top: 0;
 }
 
 .source-line {

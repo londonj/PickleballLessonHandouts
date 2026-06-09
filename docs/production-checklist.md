@@ -28,8 +28,8 @@ Use this checklist before sharing a student handout PDF.
 
 - The PDF was built with `scripts/build-handout-pdf.py`.
 - The PDF uses `templates/handout-style.css`.
-- The generated preview PNGs were visually inspected.
-- Major sections do not begin awkwardly at the bottom of a page.
+- The generated preview PNGs were visually inspected (not just the page count).
+- No numbered section is split across two pages. Each section sits wholly on one page.
 - Section 8 starts on a new page unless intentionally overridden.
 - Resources starts on a new page unless intentionally overridden.
 - The Resources section is visible and complete.

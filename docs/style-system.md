@@ -41,9 +41,11 @@ Do not manually restyle individual PDFs. Future handouts should differ in conten
 
 ## Page-Break Policy
 
-The PDF builder starts sections 8 and 11 on new pages by default. This keeps Game Application and Resources from splitting awkwardly.
+Every numbered section is kept together so it never splits across pages. Each section is wrapped in a `.handout-section` element with `break-inside: avoid`, so a section that will not fit in the remaining space moves to the next page as a whole. This can leave white space at the bottom of a page, which is acceptable. A section is only forced to break if it is too tall to fit on a single page on its own; in that case, shorten the section.
 
-Override this only when a specific handout genuinely reads better with different page starts:
+The PDF builder also starts sections 8 and 11 on new pages by default, which keeps Game Application and Resources leading their own pages.
+
+Override the page starts only when a specific handout genuinely reads better with different page starts:
 
 ```powershell
 python .\scripts\build-handout-pdf.py .\examples\example.md --page-start-sections 11
