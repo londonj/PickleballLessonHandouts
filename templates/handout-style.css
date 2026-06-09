@@ -1,0 +1,149 @@
+@page {
+  size: Letter;
+  margin: 0.54in 0.56in 0.62in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #1f2933;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 10.25pt;
+  line-height: 1.42;
+  background: white;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0 0 0.18in;
+  padding: 0.18in 0.22in 0.16in;
+  color: white;
+  font-size: 30pt;
+  line-height: 1;
+  letter-spacing: 0;
+  background: linear-gradient(90deg, #0f766e, #2563eb);
+  border-radius: 8px;
+}
+
+h2 {
+  margin: 0.18in 0 0.06in;
+  padding: 0.07in 0.11in;
+  color: #0f3f46;
+  font-size: 14.5pt;
+  line-height: 1.15;
+  background: #e8f5f2;
+  border-left: 5px solid #0f766e;
+  border-radius: 5px;
+  page-break-after: avoid;
+}
+
+h2.page-start {
+  margin-top: 0;
+}
+
+h2.section-resources {
+  margin-top: 0;
+  background: #eef2ff;
+  border-left-color: #2563eb;
+}
+
+h3 {
+  margin: 0.13in 0 0.04in;
+  color: #0f172a;
+  font-size: 11.8pt;
+  line-height: 1.2;
+  page-break-after: avoid;
+}
+
+p {
+  margin: 0 0 0.07in;
+}
+
+ul,
+ol {
+  margin: 0.02in 0 0.08in 0.23in;
+  padding: 0;
+}
+
+li {
+  margin: 0 0 0.035in;
+  padding-left: 0.02in;
+}
+
+strong {
+  color: #111827;
+}
+
+.sheet {
+  max-width: 7.4in;
+  margin: 0 auto;
+}
+
+.hard-page-break {
+  break-before: page;
+  page-break-before: always;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.source-line {
+  display: inline-block;
+  margin-top: 0.015in;
+  color: #334155;
+  font-weight: 700;
+}
+
+.description-line {
+  display: inline-block;
+  color: #334155;
+}
+
+h2 + ul,
+h2 + ol,
+h3 + ul,
+h3 + ol {
+  margin-top: 0.03in;
+}
+
+h3 + ul li {
+  margin-bottom: 0.055in;
+}
+
+h2.section-resources ~ h3 {
+  margin-top: 0.075in;
+  margin-bottom: 0.025in;
+  font-size: 10.7pt;
+}
+
+h2.section-resources ~ ul {
+  margin-bottom: 0.045in;
+  font-size: 9.35pt;
+  line-height: 1.24;
+}
+
+h2.section-resources ~ ul li {
+  margin-bottom: 0.018in;
+}
+
+h2.section-resources ~ ul .source-line {
+  margin-top: 0.006in;
+}
+
+@media print {
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  li {
+    break-inside: avoid;
+  }
+}
