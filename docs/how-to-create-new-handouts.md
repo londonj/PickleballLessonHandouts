@@ -76,11 +76,12 @@ Use this checklist before sharing a PDF with students.
 
 ### `examples/`
 
-Completed Markdown handouts are stored here. Current examples:
+Completed Markdown handouts are stored here. Earlier handouts use the older `{Technique}-Student-Handout` name; new handouts use the `Lesson-Handout-{Technique}` pattern. Current examples:
 
 - `examples/Around-The-Post-Student-Handout.md`
 - `examples/Dink-Volleys-Student-Handout.md`
 - `examples/Lob-Defense-Student-Handout.md`
+- `examples/Overhead-Smash-Student-Handout.md`
 - `examples/Third-Shot-Drop-Student-Handout.md`
 
 ### `outputs/`
@@ -117,9 +118,9 @@ Save the copy in the `examples` folder with a clear filename.
 
 Example:
 
-`examples/Serving-Deep-Student-Handout.md`
+`examples/Lesson-Handout-Serving-Deep.md`
 
-Name files in Title-Case: capitalize the first letter of each word and separate words with hyphens. End the name with `-Student-Handout`.
+Name files using the pattern `Lesson-Handout-{Technique}` in Title-Case: start with `Lesson-Handout-`, then the technique with the first letter of each word capitalized and words separated by hyphens.
 
 ### Step 3: Generate the Handout Content
 
@@ -150,41 +151,42 @@ Follow these rules:
 - Include useful rule or strategy references only when they support the lesson.
 - A numbered section must never split across pages. The build keeps each section together automatically; if a section is too tall to fit on one page, shorten it so it fits.
 - Always visually inspect the rendered preview PNGs after building, and confirm no section is split across pages. Never rely on page count alone.
-- Save the finished Markdown handout in:
-  C:\Coding\Pickleball_Lesson_Handouts\examples\[lesson-slug]-student-handout.md
+- Name the files using the pattern Lesson-Handout-[Technique] in Title-Case with dashes (for example Lesson-Handout-Overhead-Smash). Save the finished Markdown handout in:
+  C:\Coding\Pickleball_Lesson_Handouts\examples\Lesson-Handout-[Technique].md
 
 After writing the Markdown, build the PDF using:
-python C:\Coding\Pickleball_Lesson_Handouts\scripts\build-handout-pdf.py C:\Coding\Pickleball_Lesson_Handouts\examples\[lesson-slug]-student-handout.md -o C:\Coding\Pickleball_Lesson_Handouts\outputs\[lesson-slug]-student-handout.pdf
+python C:\Coding\Pickleball_Lesson_Handouts\scripts\build-handout-pdf.py C:\Coding\Pickleball_Lesson_Handouts\examples\Lesson-Handout-[Technique].md -o C:\Coding\Pickleball_Lesson_Handouts\outputs\Lesson-Handout-[Technique].pdf
 
 Before delivering the PDF, visually inspect the generated preview PNGs in:
-C:\Coding\Pickleball_Lesson_Handouts\work\[lesson-slug]-student-handout-preview
+C:\Coding\Pickleball_Lesson_Handouts\work\lesson-handout-[technique]-preview
 
 Confirm that major sections do not break awkwardly across pages and that Resources is present and coherent.
 ```
 
 Replace `[LESSON TOPIC]` with the actual lesson topic.
 
-Replace `[lesson-slug]` with the topic as a Title-Case filename: capitalize the first letter of each word and separate words with hyphens.
+Replace `[Technique]` with the topic in Title-Case: capitalize the first letter of each word and separate words with hyphens. The full filename base is then `Lesson-Handout-[Technique]`.
 
 Example:
 
 - Lesson topic: `Deep Serve and Return`
-- Filename base: `Deep-Serve-And-Return`
-- Markdown file: `examples/Deep-Serve-And-Return-Student-Handout.md`
-- PDF file: `outputs/Deep-Serve-And-Return-Student-Handout.pdf`
+- Technique: `Deep-Serve-And-Return`
+- Filename base: `Lesson-Handout-Deep-Serve-And-Return`
+- Markdown file: `examples/Lesson-Handout-Deep-Serve-And-Return.md`
+- PDF file: `outputs/Lesson-Handout-Deep-Serve-And-Return.pdf`
 
 ### Step 4: Build the PDF
 
 From the project folder, run:
 
 ```powershell
-python .\scripts\build-handout-pdf.py .\examples\[lesson-slug]-student-handout.md -o .\outputs\[lesson-slug]-student-handout.pdf
+python .\scripts\build-handout-pdf.py .\examples\Lesson-Handout-[Technique].md -o .\outputs\Lesson-Handout-[Technique].pdf
 ```
 
 Example:
 
 ```powershell
-python .\scripts\build-handout-pdf.py .\examples\Serving-Deep-Student-Handout.md -o .\outputs\Serving-Deep-Student-Handout.pdf
+python .\scripts\build-handout-pdf.py .\examples\Lesson-Handout-Serving-Deep.md -o .\outputs\Lesson-Handout-Serving-Deep.pdf
 ```
 
 By default, no section is forced onto a new page. Each section is kept together and sections flow to fill each page, moving to the next page only when they will not fit as a whole.
@@ -193,7 +195,7 @@ By default, no section is forced onto a new page. Each section is kept together 
 
 After the script runs, check the generated preview images in:
 
-`work\[lesson-slug]-student-handout-preview`
+`work\lesson-handout-[technique]-preview`
 
 Open each `page-#.png` image and check:
 
@@ -233,32 +235,32 @@ Use the finished PDF from:
 
 Example:
 
-`outputs\serving-deep-student-handout.pdf`
+`outputs\Lesson-Handout-Serving-Deep.pdf`
 
 ## Common Commands
-
-Build the existing third-shot drop example:
-
-```powershell
-python .\scripts\build-handout-pdf.py .\examples\Third-Shot-Drop-Student-Handout.md -o .\outputs\Third-Shot-Drop-Student-Handout.pdf
-```
 
 Build a new handout:
 
 ```powershell
-python .\scripts\build-handout-pdf.py .\examples\[lesson-slug]-student-handout.md -o .\outputs\[lesson-slug]-student-handout.pdf
+python .\scripts\build-handout-pdf.py .\examples\Lesson-Handout-[Technique].md -o .\outputs\Lesson-Handout-[Technique].pdf
+```
+
+Example, building the overhead smash handout:
+
+```powershell
+python .\scripts\build-handout-pdf.py .\examples\Lesson-Handout-Overhead-Smash.md -o .\outputs\Lesson-Handout-Overhead-Smash.pdf
 ```
 
 Force Resources to start on a new page:
 
 ```powershell
-python .\scripts\build-handout-pdf.py .\examples\[lesson-slug]-student-handout.md -o .\outputs\[lesson-slug]-student-handout.pdf --page-start-sections 11
+python .\scripts\build-handout-pdf.py .\examples\Lesson-Handout-[Technique].md -o .\outputs\Lesson-Handout-[Technique].pdf --page-start-sections 11
 ```
 
 Force sections 7, 8, and 11 to start on new pages:
 
 ```powershell
-python .\scripts\build-handout-pdf.py .\examples\[lesson-slug]-student-handout.md -o .\outputs\[lesson-slug]-student-handout.pdf --page-start-sections 7,8,11
+python .\scripts\build-handout-pdf.py .\examples\Lesson-Handout-[Technique].md -o .\outputs\Lesson-Handout-[Technique].pdf --page-start-sections 7,8,11
 ```
 
 ## Setup Requirements
@@ -283,7 +285,7 @@ python -m pip install pypdf pymupdf
 
 ## Caveats and Special Notes
 
-- Name handout files in Title-Case with hyphens (for example `Lob-Defense-Student-Handout.pdf`). Use the same name for the Markdown and the PDF.
+- Name handout files using the pattern `Lesson-Handout-{Technique}` in Title-Case with hyphens (for example `Lesson-Handout-Overhead-Smash.pdf`). Use the same name for the Markdown and the PDF.
 - Resources must be researched each time because links, article availability, YouTube titles, and view counts can change.
 - The AI assistant should browse the web when creating the Resources section.
 - The Resources section should not include practice drills or repeated review lists.

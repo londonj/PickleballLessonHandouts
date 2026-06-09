@@ -23,14 +23,14 @@ Follow these rules:
 - Include useful rule or strategy references only when they support the lesson.
 - A numbered section must never split across pages. The build keeps each section together automatically; if a section is too tall to fit on one page, shorten it so it fits.
 - Always visually inspect the rendered preview PNGs after building, and confirm no section is split across pages. Never rely on page count alone.
-- Save the finished Markdown handout in:
-  C:\Coding\Pickleball_Lesson_Handouts\examples\[lesson-slug]-student-handout.md
+- Name the files using the pattern Lesson-Handout-[Technique] in Title-Case with dashes (for example Lesson-Handout-Overhead-Smash). Save the finished Markdown handout in:
+  C:\Coding\Pickleball_Lesson_Handouts\examples\Lesson-Handout-[Technique].md
 
 After writing the Markdown, build the PDF using:
-python C:\Coding\Pickleball_Lesson_Handouts\scripts\build-handout-pdf.py C:\Coding\Pickleball_Lesson_Handouts\examples\[lesson-slug]-student-handout.md -o C:\Coding\Pickleball_Lesson_Handouts\outputs\[lesson-slug]-student-handout.pdf
+python C:\Coding\Pickleball_Lesson_Handouts\scripts\build-handout-pdf.py C:\Coding\Pickleball_Lesson_Handouts\examples\Lesson-Handout-[Technique].md -o C:\Coding\Pickleball_Lesson_Handouts\outputs\Lesson-Handout-[Technique].pdf
 
 Before delivering the PDF, visually inspect the generated preview PNGs in:
-C:\Coding\Pickleball_Lesson_Handouts\work\[lesson-slug]-student-handout-preview
+C:\Coding\Pickleball_Lesson_Handouts\work\lesson-handout-[technique]-preview
 
 Confirm that major sections do not break awkwardly across pages and that Resources is present and coherent.
 ```
