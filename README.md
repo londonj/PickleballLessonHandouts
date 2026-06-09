@@ -8,6 +8,7 @@ The goal is to keep content and visual design separate:
 - `templates/new-handout-starter.md` is a blank handout file with the required headings already in place.
 - `templates/handout-style.css` defines the locked visual system: fonts, colors, heading bars, spacing, margins, and page-break behavior.
 - `prompts/create-student-handout.md` contains a reusable prompt for generating new handouts.
+- `docs/how-to-create-new-handouts.md` is the full handoff guide for creating new documents.
 - `docs/production-checklist.md` is the review checklist to use before sharing a PDF.
 - `docs/style-system.md` documents the shared visual design rules.
 - `scripts/build-handout-pdf.py` converts a Markdown handout into a PDF using the shared style.
